@@ -10,7 +10,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import {AuthContext} from "./context/AuthContext";
 
 function App() {
-  const {auth} = useContext(AuthContext)
+  const {isAuth} = useContext(AuthContext)
   return (
     <>
       <NavBar />
@@ -20,7 +20,7 @@ function App() {
             <Home />
           </Route>
 
-          <PrivateRoute isAuth={auth} path="/profile">
+          <PrivateRoute isAuth={isAuth} path="/profile">
             <Profile />
           </PrivateRoute>
 
