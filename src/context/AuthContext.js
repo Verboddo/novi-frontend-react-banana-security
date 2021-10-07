@@ -23,7 +23,7 @@ function AuthContextProvider( { children } ) {
         isAuth: isAuth.isAuth,
         user: isAuth.user,
         loggedIn,
-        loggedOut
+        loggedOut,
     }
 
     return (
