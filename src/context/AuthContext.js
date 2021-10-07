@@ -1,5 +1,5 @@
 import react, {createContext, useState} from "react";
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export const AuthContext = createContext({})
 
@@ -16,7 +16,7 @@ function AuthContextProvider( { children } ) {
     function loggedOut() {
         toggleIsAuth(false)
         console.log("Gebruiker is uitgelogd!")
-        history.push("/home")
+        history.push("/")
     }
 
     const testData ={
